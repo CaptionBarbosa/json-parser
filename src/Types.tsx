@@ -6,10 +6,16 @@ export type JSONArray = Array<JSONValue>;
 
 export type JSONExplorerProps = {
   data: JSONObject;
+  rootPath?: string;
+}
+
+export type JSONRendererProps = {
+  data: JSONValue;
   hyperlinkCallback: (path: string) => void;
+  currentPath?: string;
+  jsonKey?: string;
 };
 
-export type ValuePathPair = {
-  value: JSONValue;
-  path: string;
-};
+export type DemoDataPickerProps = {
+  setDataCallback: (data: JSONObject) => void;
+}
